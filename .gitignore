@@ -1,0 +1,34 @@
+# ----------------------------------------------------------------------
+# Configuraciones de IDEs (Entornos de Desarrollo)
+# ----------------------------------------------------------------------
+
+# IntelliJ / WebStorm / Android Studio (Visto en tu repo)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------------------------------------------------------
+# macOS/Windows específicos
+# ----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------------------------------------
+# Compiladores y generadores de archivos (Si usas SASS, etc.)
+# ----------------------------------------------------------------------
+
+# Archivos temporales o de backup
+*~
+*.bak
+
+# Node (para herramientas futuras como Live Server o preprocesadores)
+node_modules/
+npm-debug.log
