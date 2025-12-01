@@ -19,9 +19,8 @@ body{
     gap: 15px;
 }
 
-.campo_fila label {
-    min-width: 100px;
-}
+
+
 
 input[type="text"],
 input[type="password"],

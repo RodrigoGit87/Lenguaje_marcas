@@ -2,6 +2,9 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
+    display: grid;/*Mantener el footer fijo sin importar el contenido*/
+    grid-template-rows: auto 1fr auto;/*Visto en instagram :P */
+
 }
 
 #storm {
@@ -93,9 +96,11 @@ a:visited {
     box-shadow: 0 4px 15px rgba(240, 0, 0, 0.4);
 }
 
-.boton_join:hover{
+.boton_join:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 20px rgba(240, 0, 0, 0.6);
+    text-decoration: none;
+    color: #fafafa;/*cambia el color del texto al pasar el raton*/
 }
 
 
@@ -124,36 +129,50 @@ a:visited {
     background-repeat: no-repeat;
 }
 
-
-.tarjetas::after { /*Efecto 'overlay' */
+/*Efecto 'overlay' */
+.tarjetas::after {
     content: '';
+    /* Crea un elemento invisible que cubre el area de la tarjeta*/
     position: absolute;
+    /*Hace que este overlay cubra toda la tarjeta (100% de ancho y alto) 
+     y top:0 y left:0 cubra toda la tarjeta*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    /*el elemento 'invisible'
+    se vuelve visible con esto colores en gradiente*/
 }
 
-.tarjetas:hover { /*Efecto 'hover' */
+.tarjetas:hover {
+    /*Efecto 'hover' */
     transform: translateY(-10px);
+    /*para agrandar al pasar raton*/
     box-shadow: crimson 4px 4px 60px;
 }
 
 .tarjetas:hover::after {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to bottom, rgba(255, 251, 251, 0.2), rgba(0, 0, 0, 0.7));
 }
 
 .tarjeta_contenido {
     position: relative;
+    /*el contenido de la tarjeta se posiciona de forma relativa*/
     z-index: 2;
+    /*El texto se posiciona SOBRE el overlay*/
     height: 100%;
+    /*ocupar todo el alto de la tarjeta*/
     display: flex;
+    /*permite organizar los elementos dentro de la tarjeta*/
     flex-direction: column;
+    /*organiza los elementos en columna*/
     justify-content: flex-end;
+    /*alinear los elementos en el 'bottom' de la tarjeta*/
     padding: 30px 30px 40px 30px;
     color: white;
     box-sizing: border-box;
+    /*incluye el padding y el border en la tarjeta*/
 }
 
 .tarjeta_contenido h2 {
@@ -183,22 +202,32 @@ a:visited {
     border: none;
     padding: 12px 30px;
     cursor: pointer;
+    /*Cambia el cursor al pasar por encima del boton, por una 'manita'*/
     border-radius: 5px;
     transition: all 0.3s ease;
+    /*Transición suave al pasar por encima del boton*/
     display: inline-block;
+    /*Permite que el botón funcione tanto como enlace (<a>) como botón (<button>)*/
     text-decoration: none;
+    /*Quita el subrayado del enlace*/
     text-align: center;
+    /*Alinear texto al centro*/
     align-self: flex-start;
+    /*Alinea el botón  al inicio de la tarjeta*/
     box-shadow: 0 4px 15px rgba(240, 0, 0, 0.4);
+    /*efecto de sombra detras del boton*/
 }
 
 .btn_tarjeta:hover {
+    /*:hover se activa al pasar por encima el ratón*/
     background-color: #f37070;
     transform: scale(1.05);
+    /*el boton se agranda al pasar por encima el raton*/
     box-shadow: 0 6px 20px rgba(240, 0, 0, 0.6);
+    /*el efecto sombra se agranda y un poco mas intensa*/
 }
 
-
+/*Imagenes de background para las tarjetas  */
 #tarjeta_noticias {
     background-image: url('../assets/imagen_noticias.png');
 }
@@ -209,4 +238,12 @@ a:visited {
 
 #tarjeta_galeria {
     background-image: url('../assets/imagen_galeria.jpg');
+}
+
+.footer_contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    color: rgb(255, 216, 216);
 }
