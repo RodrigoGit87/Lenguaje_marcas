@@ -1,0 +1,110 @@
+.body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.table {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Stack Sans Notch", sans-serif;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+h1 {
+    font-size: 2.9rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    border-bottom: 3px solid #dc143c;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+p {
+    max-width: 800px;
+    text-align: justify;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+.seccion {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: white;
+    border-radius: 16px;
+    padding: 50px 40px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer_noticias {
+    background: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 12px 12px 0 0;
+    margin-top: 40px;
+}
+/* Boton de retorno HOME*/
+.retorno {
+    margin-left: 10px;
+    display: flex;
+    position: fixed;
+    color: rgb(0, 0, 0);
+}
+
+.retorno a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Lato, sans-serif;
+}
+
+.retorno a:visited {
+    color: rgb(0, 0, 0);
+}
+.retorno a:hover {/*transicion del color del texto con el raton*/
+    color: #fafafa;
+    transition: all 0.8s ease;
+}
+
+.retorno span{
+    color: transparent;
+    border: 5px inset crimson; /*borde con efecto relieve*/
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.retorno span:hover{
+    background: linear-gradient(to top left, crimson, darkred);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 3px 1px 1.5px rgba(0, 0, 0, 0.26);
+    
+}
