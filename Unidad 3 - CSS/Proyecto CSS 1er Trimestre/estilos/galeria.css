@@ -199,3 +199,40 @@
     height: 2px;
     background-color: rgb(240, 0, 0);
 }
+
+.retorno {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    position: fixed;
+    color: rgb(0, 0, 0);
+}
+
+.retorno a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Lato, sans-serif;
+}
+
+.retorno a:visited {
+    color: rgb(0, 0, 0);
+}
+.retorno a:hover {/*transicion del color del texto con el raton*/
+    color: #fafafa;
+    transition: all 0.8s ease;
+}
+
+.retorno span{
+    color: transparent;
+    border: 5px inset crimson; /*borde con efecto relieve*/
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.retorno span:hover{
+    background: linear-gradient(to top left, crimson, darkred);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 3px 1px 1.5px rgba(0, 0, 0, 0.26);
+    
+}
